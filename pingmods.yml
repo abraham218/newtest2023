@@ -1,13 +1,11 @@
 ---
-
 - hosts: all
   gather_facts: False
   connection: local
-
   tasks:
-    - name: ping
-      shell: ping -c 1 -w 2 192.168.1.20
-      ignore_errors: true
     - name: print name
       ansible.builtin.debug:
         msg: "Abraham Augustine"
+
+    - name: Ping test
+      ansible.builtin.ping:

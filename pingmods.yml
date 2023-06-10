@@ -7,5 +7,5 @@
   tasks:
 
     - name: ping
-      shell: ping -c 1 -w 2 8.8.8.8
+      shell: ping -c 1 -w 2 192.168.1.21
       ignore_errors: true

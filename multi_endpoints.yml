@@ -1,0 +1,14 @@
+---
+- name: Playbook for Web automation
+  hosts: localhost
+  tasks:
+  - name: Check if below URL is available and returning status 200
+    uri:
+      url: "{{ item }}"
+    register: result
+    until: "result.status == 200"
+    retries: 2
+    delay: 10
+    loop:
+      - https://www.google.com
+      - https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox

@@ -26,6 +26,6 @@
 
     - name: Install docker-ce
       ansible.builtin.apt:
-        name: "docker"
+        name: "docker.io"
         state: latest
         update_cache: true

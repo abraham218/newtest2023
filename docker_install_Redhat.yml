@@ -25,3 +25,21 @@
         password: "{{ subscription_password }}"
         pool_ids:
           - 2c94b376870f5b140187172bdc1f22f7
+    - name: - name: Install docker
+      ansible.builtin.yum:
+        name: 
+          - docker
+        state: latest
+        update_cache: true 
+        
+        
+
+
+
+      
+      
+      
+      
+      
+    
+      

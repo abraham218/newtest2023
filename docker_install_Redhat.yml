@@ -1,13 +1,21 @@
 ---
-- name: install docker on redhat and centos
+- name: subscription-manager module demo
   hosts: all
-  become: yes
+  become: true
+  vars:
+    subscription_username: "abilla@ep.com"
+    subscription_password: "glory2God"
   tasks:
-    - name: set mydistribution
-      ansible.builtin.set_fact:
-        mydistribution: "{{ 'rhel' if (ansible_distribution == 'Red Hat Enterprise Linux') else (ansible_distribution | lower) }}"
-
-    - name: install subscription-manager
-      ansible.builtin.yum_repository:
-        name: subscription-manager
+    - name: Install Docker
+      ansible.builtin.yum:
+        name:
+          - subscription-manager
+        state: latest
+        update_cache: true 
+    
+    - name: register with subscription-manager
+      community.general.redhat_subscription:
         state: present
+        username: "{{ subscription_username }}"
+        password: "{{ subscription_password }}"
+        auto_attach: true

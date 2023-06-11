@@ -6,7 +6,7 @@
     - name: Install apt-transport-https
       ansible.builtin.apt:
         name:
-          - apt-trasport-https
+          - apt-transport-https
           - ca-certificates
           - lsb-release
           - gnupg

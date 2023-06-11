@@ -25,4 +25,3 @@
       password: "{{ subscription_password }}"
       pool_ids:
         - 2c94b376870f5b140187172bdc1f22f7
-        - 2c9470c787a06a960187a4dac1951a2a

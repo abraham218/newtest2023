@@ -6,7 +6,7 @@
     subscription_username: "abilla@ep.com"
     subscription_password: "glory2God"
   tasks:
-    - name: Install Docker
+    - name: Install subscription-manager
       ansible.builtin.yum:
         name:
           - subscription-manager

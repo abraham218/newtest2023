@@ -1,0 +1,7 @@
+---
+- name: ping remote servers
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Example from an Ansible Playbook
+      ansible.builtin.ping:

@@ -1,5 +1,4 @@
 #!/bin/bash
-# Variables
 current_date=$(date +"%Y-%m-%d")
 dir_path="/workspace2023/scoutsuite"
 #Extract AWS account number from AWS CLI

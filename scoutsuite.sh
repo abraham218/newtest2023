@@ -1,5 +1,5 @@
 #!/bin/bash
-current_date=$(date +"%Y-%m-%d")
+current_date=$(date +"%Y-%m-%d-%s")
 dir_path="/workspace2023/scoutsuite"
 aws_account_number=$(aws sts get-caller-identity --profile scoutuser --output text --query 'Account')
 profile="scoutuser"
